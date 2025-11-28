@@ -3,7 +3,7 @@ import re
 
 def removeDuplicateWords(input):
 
-    regex = r'\b(\w+)(?:\W+\1\b)'
+    regex = r'\b(\w)(?:\W+\1\b)+'
 
     return re.sub(regex, r'\1', input, flags=re.IGNORECASE)
 
@@ -17,4 +17,5 @@ print(removeDuplicateWords(str2))
 
 str3 = "Hello hello world world"
 print(removeDuplicateWords(str3))
+
 
